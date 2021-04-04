@@ -1,5 +1,5 @@
-const staticCacheName = 's-app-v3'
-const dynamicCacheName = 'd-app-v1'
+const staticCacheName = 's-app-v-2';
+const dynamicCacheName = 'd-app-v-2';
 
 const assetUrls = [
     'index.html',
@@ -7,7 +7,7 @@ const assetUrls = [
     'style.css',
     'backcity.jpg',
     'offline.html'
-]
+];
 
 self.addEventListener('install', async event => {
     const cache = await caches.open(staticCacheName)
@@ -28,11 +28,11 @@ self.addEventListener('fetch', event => {
     const {request} = event;
     const url = new URL(request.url);
     if (url.origin === location.origin) {
-        event.respondWith(cacheFirst(event.request));
-    } else {
+       event.respondWith(cacheFirst(event.request));
+    } 
+    else {
         event.respondWith(networkFirst(request));
     }
-
 });
 
 async function cacheFirst(request) {
@@ -48,7 +48,7 @@ async function networkFirst(request) {
         return response; 
     } catch(e) {
         const cached = await cache.match(request);
-        return cached ?? await caches.match('/offline.html');
+        return cached ?? await caches.match('offline.html');
     }
 
 

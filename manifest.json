@@ -6,6 +6,7 @@
     "display": "standalone",
     "orientation": "portrait",
     "start_url": ".",
+    "scope": ".",
     "icons": [
         {
             "src": "icon/64x64.png",
@@ -15,7 +16,8 @@
         {
             "src": "icon/128x128.png",
             "sizes": "128x128",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         },
         {
             "src": "icon/256x256.png",
