@@ -36,8 +36,14 @@ self.addEventListener('fetch', event => {
 });
 
 async function cacheFirst(request) {
-    const cached = await caches.match(request);
-    return cached ?? await fetch(request);
+    try{
+        const cached = await caches.match(request)
+        return cached ?? await fetch(request)
+    }
+    catch(e){
+        console.log(e,'Something happend incorrect')
+    }
+
 }
 
 async function networkFirst(request) {
