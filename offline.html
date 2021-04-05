@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="./icon/16x16.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color"  content="#000000"/>
     <meta
     name="description"           
-    content="MG PROGRESIVE WEB APPLICATION.">
+    content="MG PROGRESIVE WEB APPLICATION." />
     <title>PWA APP</title>
     <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" href="./aot.png">
     <link rel="manifest" href="./manifest.json">
+    <link rel="canonical" href="https://pwa-mg.netlify.app/"/>
+
 </head>
 <body>
-    <div id="contPwa">
+    <div id="contPwa" title="Container">
         <nav>
             <h1>MG PWA APP</h1>
         </nav>
@@ -22,5 +25,78 @@
             <h2>This time youre app is offline try latter </h2>
         </header>
     </div>
+    <style>
+        * {
+          margin: 0px;
+          padding: 0px;
+        }
+
+        #contPwa {
+          width: 100vw;
+          background-image: url(./backcity.jpg);
+          background-color: #c31717;
+          background-blend-mode: hard-light;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        nav {
+          width: 100%;
+          background: rgb(44, 144, 229);
+        }
+
+        nav h1 {
+          text-align: center;
+          font-size: 35px;
+          color: #fff;
+        }
+
+        header {
+          width: 100%;
+          background: rgb(19, 61, 213);
+          height: 80px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        header h2 {
+          font-size: 22px;
+          color: #fff;
+        }
+
+        #container {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #posts {
+          width: 50%;
+        }
+
+        .card {
+          margin: 15px 0px;
+          -webkit-box-shadow: 3px 3px 3px 3px #959595;
+          box-shadow: 3px 3px 3px 3px #959595;
+          padding-left: 20px;
+        }
+
+        .card-title {
+          font-size: 22px;
+          margin-bottom: 15px;
+        }
+
+        .card-body {
+          padding-bottom: 15px;
+        }
+
+    </style>
 </body>
 </html>

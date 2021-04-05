@@ -1,14 +1,15 @@
 window.addEventListener('load', async () => {
     if(navigator.serviceWorker) {
         try {
-        const reg = await navigator.serviceWorker.register('sw.js',{ scope: "."});
+        const reg = await navigator.serviceWorker.register('sw.js');
             console.log('Succsess', reg);
         } catch (e) {
             console.log('Fail');
         }
     }
-
-    await loadPosts();
+    if(navigator.onLine){
+        await loadPosts();
+    }
 });
 
 async function loadPosts(){
